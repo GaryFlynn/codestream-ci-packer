@@ -16,4 +16,6 @@ RUN     wget -q https://github.com/rgl/packer-provisioner-windows-update/release
         tar xf packer-provisioner-windows-update_${WINUPDATE_VER}_linux_amd64.tar.gz && \
         mv -f packer-provisioner-windows-update /usr/local/bin/
 
-RUN    /bin/bash -c 'cd /usr/local/bin/; ls -la; chmod +x packer-provisioner-windows-update; ls -la'
+ADD     https://github.com/rgl/packer-provisioner-windows-update/releases/download/v${WINUPDATE_VER}/packer-provisioner-windows-update_${WINUPDATE_VER}_linux_amd64.tar.gz /tmp/packer-provisioner-windows-update-linux.tar.gz
+
+RUN     /bin/bash -c 'tar -xf /tmp/packer-provisioner-windows-update-linux.tar.gz -C /usr/local/bin/ && chmod 755 /usr/local/bin/packer-provisioner-windows-update'
