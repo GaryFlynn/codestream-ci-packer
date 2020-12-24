@@ -14,5 +14,5 @@ RUN     wget -q https://releases.hashicorp.com/packer/${PACKER_VER}/packer_${PAC
 
 RUN     wget -q https://github.com/rgl/packer-provisioner-windows-update/releases/download/v${WINUPDATE_VER}/packer-provisioner-windows-update_${WINUPDATE_VER}_linux_amd64.tar.gz && \
         tar xf packer-provisioner-windows-update_${WINUPDATE_VER}_linux_amd64.tar.gz && \
-        mv -f packer-provisioner-windows-update /usr/local/bin/
+        mv -f packer-provisioner-windows-update /usr/local/bin/ && \
         chmod +x /usr/local/bin/packer-provisioner-windows-update
