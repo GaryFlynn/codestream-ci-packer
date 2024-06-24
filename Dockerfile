@@ -1,7 +1,7 @@
 FROM sammcgeown/codestream-ci:latest
 LABEL maintainer="contact@garyflynn.com"
 
-ENV PACKER_VER=1.6.2
+ENV PACKER_VER=1.11.0
 ENV WINUPDATE_VER=0.10.1
 
 # Install jq
